@@ -1,0 +1,24 @@
+<!--div class="row">
+    <div class="col-md-5">
+        <app-recipe-list></app-recipe-list>
+    </div>
+    <input type="text" #box/>
+    <button (click)="updateDataEvent.emit(box.value)">update data</button>
+    <div class="col-md-7">
+        <app-recipe-detail></app-recipe-detail>
+    </div>
+</div-->
+<div>
+    <app-recipe-detail [receipeName]="receipeName"></app-recipe-detail>
+</div>
+
+<div>
+    <button (click)="sendMessage()">Send Messgae to Parent</button>
+</div>
+<hr>
+<div>
+    <button (click)="OnProgressClick()">Check Progress</button>
+</div>
+<app-recipe-detail (receivedMessage)="receiveMessageProperty($event)">
+<div>{{message}}</div>
+

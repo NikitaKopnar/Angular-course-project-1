@@ -6,5 +6,15 @@ import { Component } from '@angular/core';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'project-1';
+  message!: string;
+  progressNumber!: number;
+  updateData (item:String) {
+    console.warn(item);
+  }
+  receiveMessage(message:string){
+    this.message = message;
+  }
+  receiveProgress(progressReceived : number) {
+    this.progressNumber = progressReceived;
+  }
 }
